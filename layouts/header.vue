@@ -95,7 +95,7 @@
 			</div>
 		</div>
 		<div :class="{ 'block': navigationVisible, 'sm:hidden': !navigationVisible }">
-			<div class="px-2 pt-2 pb-3 sm:px-3  text-gray-300">
+			<div class="mx-2 px-2 pt-2 pb-3 sm:px-3  text-gray-300">
 				<router-link
 					class="mt-1 block px-3 py-2 rounded-md text-base font-medium hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700"
 					v-for="page in pages" :key="page.id" :to="page.url"
