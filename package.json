@@ -15,9 +15,12 @@
     "@nuxtjs/prismic": "^1.2.3",
     "@nuxtjs/pwa": "^3.0.0-beta.20",
     "@prismicio/vue": "^2.0.7",
+    "@tailwindcss/ui": "^0.5.0",
     "nuxt": "^2.14.0",
+    "nuxt-property-decorator": "^2.7.2",
     "nuxt-sm": "^0.0.4",
     "prismic-javascript": "^3.0.1",
+    "vue-class-component": "^7.2.5",
     "vue-essential-slices": "^0.2.0",
     "vue-slicezone": "^0.0.26"
   },

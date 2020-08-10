@@ -18,7 +18,8 @@ export default {
 					style: `background: ${secondaryColor}`
 				},
 				CallToAction: {
-					color: secondaryColor,
+					color: "#FFF",
+					align: "left",
 					wrapper: {
 						style: `background: ${primaryColor}`
 					},

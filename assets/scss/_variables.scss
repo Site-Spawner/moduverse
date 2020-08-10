@@ -1,9 +1,11 @@
-$primary: #ea4746;
-$secondary: #132530;
+$primary: #086de2;
+$secondary: #131c30;
 
 :root {
-    --primary-hue: 0;
-    --secondary-hue: 203;
-    --color--primary: hsl(var(--secondary-hue), 43%, 13%);
-    --color--secondary: hsl(var(--primary-hue), 80%, 60%);
+    --primary-hue: 212;
+    --secondary-hue: 221;
+    --color--primary: hsl(var(--primary-hue), 26%, 20%);
+    --color--secondary: hsl(var(--secondary-hue), 43%, 13%);
+    --color--primary--dark: hsl(var(--primary-hue), 26%, 23%);
+    --color--primary--darker: hsl(var(--primary-hue), 75%, 21%);
 }

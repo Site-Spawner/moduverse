@@ -31,6 +31,9 @@ export default {
       rel: 'icon',
       type: 'image/x-icon',
       href: '/favicon.ico'
+    },{
+      href: 'https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap',
+      rel: 'stylesheet'
     }],
     script: [{
       "src": "https://cdn.polyfill.io/v2/polyfill.min.js?features=Element.prototype.classList"
@@ -42,7 +45,7 @@ export default {
   /*
   ** Global CSS
   */
-  css: ["vue-essential-slices/src/styles/styles.scss"],
+  css: ["vue-essential-slices/src/styles/styles.scss", "@/assets/scss/main.scss"],
 
   /*
   ** Plugins to load before mounting the App

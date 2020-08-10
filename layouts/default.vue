@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Header />
     <Nuxt />
   </div>
 </template>
@@ -60,3 +61,15 @@ html {
   background-color: #35495e;
 }
 </style>
+<script lang="ts">
+import Header from '@/layouts/header.vue';
+import { Vue, Component } from 'nuxt-property-decorator'
+@Component({
+  components: {
+    Header,
+  }
+})
+export default class Application extends Vue {
+
+}
+</script>
