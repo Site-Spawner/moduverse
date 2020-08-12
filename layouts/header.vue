@@ -121,16 +121,16 @@
 	</nav>
 </template>
 <script lang="ts">
-import { Vue, Component } from 'vue-property-decorator'
+import { Vue, Component } from 'nuxt-property-decorator'
 @Component({
-
 })
 export default class Header extends Vue {
 	pages = [];
 
 	pageBlacklist = [ 'home' ];
 	navigationVisible = false;
-	created() {
+
+	async fetch() {
 		this.fetchPages();
 	}
 
