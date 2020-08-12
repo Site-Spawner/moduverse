@@ -131,7 +131,7 @@ export default class Header extends Vue {
 	navigationVisible = false;
 
 	async fetch() {
-		this.fetchPages();
+		await this.fetchPages();
 	}
 
 	async fetchPages() {
