@@ -24,7 +24,7 @@ export default {
 					},
 				},
 				CallToAction: {
-					color: primaryColor,
+					color: secondaryColor,
 					align: "left",
 					wrapper: {
 						style: `background: #FFF`

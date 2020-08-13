@@ -13,14 +13,14 @@ export default {
 	data() {
 		return {
 			theme: {
-				color: primaryColor,
-				align: "right",
+				color: "#FFF",
+				align: "left",
 				wrapper: {
-					style: `background: ${secondaryColor}`
+					style: `background: ${primaryColor}`
 				},
 				CallToAction: {
 					color: "#FFF",
-					align: "right",
+					align: "left",
 					wrapper: {
 						style: `background: ${primaryColor}`
 					},
@@ -30,6 +30,12 @@ export default {
 						style: `background: ${primaryColor}`
 					},
 				},
+				FaqSection: {
+					color: '#FFF',
+					wrapper: {
+						style: `background: ${primaryColor}`
+					},
+				}
 			}
 		}
 	},
@@ -38,3 +44,13 @@ export default {
 	},
 }
 </script>
+<style lang="scss">
+	#__layout {
+		.c-accordion .c-accordion__heading > button {
+			background-color: #fff;
+		}
+		.accordion-js .c-accordion__panel {
+			background-color: #eee;
+		}
+	}
+</style>

@@ -1,5 +1,5 @@
 <template>
-  <section class="section" v-bind="theme.wrapper">
+  <section class="ps" v-bind="theme.wrapper">
     <div class="ps__wrap">
       <ps-description v-if="slice.primary.content" :field="slice.primary.content" :theme="theme.description" :align="theme.align" />
       <template v-else>
@@ -30,10 +30,18 @@ export default {
 </script>
 <style scoped lang="scss">
 @import "vue-essential-slices/src/styles/styles.scss";
+.ps {
+  padding: {
+    top: 0;
+    bottom: 0;
+  }
+}
 .ps__wrap {
   padding: {
     top: calc(var(--v-space) / 2);
     bottom: calc(var(--v-space) / 2);
+    right: var(--c-margin);
+    left: var(--c-margin);
   }
   background: #eeeeee;
   color: #111;
