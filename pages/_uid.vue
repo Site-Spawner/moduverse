@@ -14,16 +14,22 @@ export default {
 		return {
 			theme: {
 				color: primaryColor,
+				align: "right",
 				wrapper: {
 					style: `background: ${secondaryColor}`
 				},
 				CallToAction: {
 					color: "#FFF",
-					align: "left",
+					align: "right",
 					wrapper: {
 						style: `background: ${primaryColor}`
 					},
-				}
+				},
+				TextContent: {
+					wrapper: {
+						style: `background: ${primaryColor}`
+					},
+				},
 			}
 		}
 	},

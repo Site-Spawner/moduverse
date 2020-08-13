@@ -16,11 +16,18 @@ export default {
 				wrapper: {
 					style: `background: ${secondaryColor}`
 				},
-				CallToAction: {
+				AlternateGrid: {
 					color: "#FFF",
 					align: "left",
 					wrapper: {
 						style: `background: ${primaryColor}`
+					},
+				},
+				CallToAction: {
+					color: primaryColor,
+					align: "left",
+					wrapper: {
+						style: `background: #FFF`
 					},
 				}
 			}
