@@ -29,8 +29,10 @@ export default {
   }
 }
 </script>
-<style scoped lang="scss">
+<style lang="scss" scoped>
 @import "vue-essential-slices/src/styles/styles.scss";
+@import "@/assets/scss/_variables.scss";
+
 .ps {
   padding: {
     top: 0;
@@ -46,6 +48,9 @@ export default {
   }
   background: #eeeeee;
   color: #111;
+  .ps__desc {
+    a { color: $primary }
+  }
 }
 </style>
 
