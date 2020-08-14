@@ -1,7 +1,8 @@
 <template>
   <section class="ps" v-bind="theme.wrapper">
     <div class="ps__wrap">
-      <ps-description v-if="slice.primary.content" :field="slice.primary.content" :theme="theme.description" :align="theme.align" />
+      <div class="ps__desc" v-if="slice.primary.content" v-html="$prismic.asHtml(slice.primary.content)">
+      </div>
       <template v-else>
         <h1>Empty textContent</h1>
         <p v-if="endpoint">
