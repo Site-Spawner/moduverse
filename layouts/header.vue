@@ -11,11 +11,11 @@
 					<div class="ml-10 flex flex-grow items-center justify-end">
 						<nav class="text-gray-300 flex items-center">
 							<nuxt-link
-								v-for="page in pages" :key="page.id" :to="page.url"
+								v-for="page in pages" :key="page.link.id" :to="page.link.url"
 								class="mr-4 px-3 py-2 rounded-md text-sm font-medium hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700"
 								active-class="active text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700"
 							>
-								{{ page.data.meta_title }}
+								{{ $prismic.asText(page.label) }}
 							</nuxt-link>
 						</nav>
 					</div>
@@ -98,8 +98,8 @@
 			<div class="mx-2 px-2 pt-2 pb-3 sm:px-3  text-gray-300">
 				<router-link
 					class="mt-1 block px-3 py-2 rounded-md text-base font-medium hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700"
-					v-for="page in pages" :key="page.id" :to="page.url"
-				>{{ page.data.meta_title }}</router-link>
+					v-for="page in pages" :key="page.link.id" :to="page.link.url"
+				>{{ $prismic.asText(page.label) }}</router-link>
 			</div>
 			<div class="pt-4 pb-3 border-t border-gray-700" v-if="false">
 				<div class="flex items-center px-5">
@@ -127,8 +127,7 @@ import { Vue, Component } from 'nuxt-property-decorator'
 export default class Header extends Vue {
 	pages = [];
 
-	pageBlacklist = [ 'home' ];
-	navigationVisible = false;
+	navigationVisible = true;
 
 	async fetch() {
 		await this.fetchPages();
@@ -136,9 +135,13 @@ export default class Header extends Vue {
 
 	async fetchPages() {
 		const $prismic = Vue.prototype.$nuxt.$prismic;
-		this.pages = (await $prismic.api.query(
-        	$prismic.predicates.at("document.type", "page"),
-		)).results.filter((page: { uid: string }) => !this.pageBlacklist.includes(page.uid));
+		await $prismic.api.getSingle('navigation').then((data: any) => {
+			this.pages = data.data.menu_links;
+		});
+	}
+
+	created() {
+		this.navigationVisible = false;
 	}
 }
 </script>
