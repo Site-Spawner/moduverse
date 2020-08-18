@@ -19,10 +19,10 @@ export default {
 					style: `background: ${primaryColor}`
 				},
 				CallToAction: {
-					color: "#FFF",
+					color: secondaryColor,
 					align: "left",
 					wrapper: {
-						style: `background: ${primaryColor}`
+						style: `background: #FFF`
 					},
 				},
 				TextContent: {
@@ -51,6 +51,24 @@ export default {
 		}
 		.accordion-js .c-accordion__panel {
 			background-color: #eee;
+		}
+		.ps__desc a {
+			&, &:visited {
+				color: var(--color--primary);
+			}
+		}
+
+		.ps__kicker-icon {
+			max-width: 100% !important;
+			order: 2;
+		}
+
+		.ps-cta .ps__header {
+			display: flex;
+			flex-direction: column;
+			.ps__title {
+				order: 1;
+			}
 		}
 	}
 </style>

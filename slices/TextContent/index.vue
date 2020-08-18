@@ -13,7 +13,6 @@
   </section>
 </template>
 <script>
-import { PsDescription } from 'vue-essential-slices/src/components';
 export default {
   props: ['slice', 'theme'],
   name: 'TextContent',
@@ -24,9 +23,6 @@ export default {
         : null
     }
   },
-  components: {
-    PsDescription,
-  }
 }
 </script>
 <style lang="scss" scoped>
@@ -46,7 +42,7 @@ export default {
     right: var(--c-margin);
     left: var(--c-margin);
   }
-  background: #eeeeee;
+  background: #ffffff;
   color: #111;
   .ps__desc {
     a { color: $primary }

@@ -40,6 +40,6 @@ export default {
 </script>
 <style lang="scss">
 	.ps__kicker-icon {
-		max-width: 50% !important;
+		max-width: 100% !important;
 	}
 </style>
