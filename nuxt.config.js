@@ -58,6 +58,8 @@ export default {
   */
   components: true,
 
+  dev: process.env.NODE_ENV !== 'production',
+
   /*
   ** Nuxt.js dev-modules
   */
